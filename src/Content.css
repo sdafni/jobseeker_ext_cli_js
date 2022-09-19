@@ -1,0 +1,89 @@
+
+
+
+.btn {
+  width: 30%;
+
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 30%;
+}
+
+
+.add-form {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  width: 600px;
+  height: 300px;
+  margin-bottom: 40px;
+  border-width: 1px;
+  border-color: rgb(17, 7, 7);
+  border-style: solid;
+  transition: width 0.4s;
+  z-index: 99999;
+  background-color: #fff;
+
+}
+.add-form-hidden{
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  width: 0px;
+  height: 300px;
+  margin-bottom: 40px;
+  border-width: 0px;
+  border-color: rgb(17, 7, 7);
+  border-style: solid;
+  transition: width 0.4s;
+  background-color: #fff;
+  z-index: 99999;
+}
+
+.form-control {
+  margin: 22px 22px
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 80%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+#drawerButton {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(128, 207, 207);
+  z-index: 9999999;
+
+}
