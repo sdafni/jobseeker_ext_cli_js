@@ -27,7 +27,8 @@
       "js": [
         "contentScript.js"
       ],
-      "css": ["Content.css"]
+      "css": ["Content.css"],
+      "icons": ["chevron-arrows-svgrepo-com_p_left.svg", "chevron-arrows-svgrepo-com_p_left.svg"]
     }
   ]
 }

@@ -1,89 +1,83 @@
 
-
-
-.btn {
-  width: 30%;
-
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn-block {
-  display: block;
-  width: 30%;
-}
-
-
 .add-form {
   position: fixed;
   bottom: 70px;
   right: 10px;
-  width: 600px;
+  width: 450px;
   height: 300px;
   margin-bottom: 40px;
-  border-width: 1px;
+  border-width: 0.4px;
   border-color: rgb(17, 7, 7);
   border-style: solid;
-  transition: width 0.4s;
+  transition: width 0.2s;
   z-index: 99999;
-  background-color: #fff;
-
+  background-color: white;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px 5px 1px 20px;
 }
-.add-form-hidden{
-  position: fixed;
-  bottom: 70px;
-  right: 10px;
+.add-form.out {
   width: 0px;
-  height: 300px;
-  margin-bottom: 40px;
-  border-width: 0px;
-  border-color: rgb(17, 7, 7);
-  border-style: solid;
-  transition: width 0.4s;
-  background-color: #fff;
-  z-index: 99999;
 }
 
-.form-control {
-  margin: 22px 22px
+
+.btn {
+  background-color: rgb(144, 205, 244);
+  color: rgb(10, 10, 10);
+  border-radius: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit; 
 }
 
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 80%;
+#submitBtn {
   height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
+  width: 100px;
+  border: 0px;
+  margin-top: 13px;
 }
+
+
+
+.form-controlx {
+  border-radius: inherit;
+  font-size: 19px;
+}
+
+.form-controlx h1 {
+  font-size: 19px;
+}
+
+
+.form-controlx label {
+  display: block;
+  font-size: 19px;
+}
+
+.form-controlx input {
+  width: 95%;
+  height: 35px;
+  font-size: 17px;
+  border-radius: inherit;
+  border-width: 0.03px;
+  border-color: rgb(151, 189, 226);
+  margin-top: 5px;
+}
+
 
 #drawerButton {
   position: fixed;
+  border: 0px;
   bottom: 40px;
   right: 10px;
   width: 100px;
-  height: 50px;
-  background-color: rgb(128, 207, 207);
+  height: 60px;
+  background-color: rgb(144, 205, 244);
   z-index: 9999999;
+  border-radius: 5px;
+}
 
+#drawerButton-img {
+  height: 20px;
+  width: 20px;
 }

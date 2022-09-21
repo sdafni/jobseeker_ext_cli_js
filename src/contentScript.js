@@ -3,51 +3,68 @@ console.log("Li yuval invoked!")
 // maybe click is not the right time
 document.addEventListener("click", detectJobs);
 
-let opened = false;
+
+test_mode = document.currentScript && document.currentScript.getAttribute('test_mode'); //1
+
+if (!test_mode) {
+  var yuvDiv = document.createElement('div');
+  yuvDiv.id = 'yuvDiv';
+  yuvDiv.innerHTML = `
+
+  <form id="yuvForm" class='add-form' >
+
+  <div  class='form-controlx'>
+      <h1>Create new Job</h1>
+  </div>
+
+  <div class='form-controlx'>
+      <label>Company name
+      </label>
+      <input id="companyName" name="companyName" type='text' placeholder='Company name' />
+  </div>
+
+  <div class='form-controlx' >
+      <label>Job Title</label>
+      <input id='jobTitle' name="jobTitle" type='text' placeholder='Job Title' />
+  </div>
+
+  <div class='form-controlx'>
+      <input id='submitBtn' type='submit' value='Submit' class='btn' />
+  </div>
+  </form>
+
+  <button id="drawerButton" type="submit">
+    <img id="drawerButton-img" src="chevron-arrows-svgrepo-com_p_left.svg">
+  </button>
 
 
-var yuvDiv = document.createElement('div');
-yuvDiv.id = 'yuvDiv';
-yuvDiv.innerHTML = `
-
-<form id="yuvForm" class='add-form-hidden'>
-
-    <div class='form-control'>
-        <label>Company</label>
-        <input id="companyName" name="companyName" type='text' placeholder='Company name' />
-    </div>
-
-    <div class='form-control' >
-        <label>Job title</label>
-        <input id='jobTitle' name="jobTitle" type='text' placeholder='Job title' />
-    </div>
-
-    <div class='form-control'>
-        <input type='submit' value='Save Job' class='btn btn-block' />
-    </div>
-</form>
-
-<button id="drawerButton" type="submit"></button>
 
 
-`
-document.getElementsByTagName('body')[0].appendChild(yuvDiv);
+  `
+  document.getElementsByTagName('body')[0].appendChild(yuvDiv);
+
+}
 
 
-
-
+let opened = true;
 
 const form = document.getElementById('yuvForm');
 
 const drawerButton = document.getElementById('drawerButton');
-drawerButton.onclick = function () {
-  if (opened) {
-    form.className = "add-form-hidden";
+function drawerClick(event) {
+  console.log("drawer clicked")
+
+  //form.classList.toggle("out");
+  if (form.hidden){
+    document.getElementById('drawerButton-img').src = "chevron-arrows-svgrepo-com_p_right.svg";
   } else {
-    form.className = "add-form";
+    document.getElementById('drawerButton-img').src = "chevron-arrows-svgrepo-com_p_left.svg";
   }
-  opened = !opened;
+  form.hidden = !form.hidden;
+
 };
+drawerButton.addEventListener("click", drawerClick);
+
 
 form.addEventListener('submit', function (e) {
   // Prevent default behavior:

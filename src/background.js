@@ -59,9 +59,6 @@ chrome.runtime.onMessage.addListener( function(message, sender, sendResponse) {
 
         console.log("got QUERY message from Li");
 
-
-
-
         const q = query(jobsCollectionRef, where("jobTitle", "==", message.jobTitle), where("companyName", "==", message.companyName));
 
         getDocs(q).then((querySnapshot) => {
