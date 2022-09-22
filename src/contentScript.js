@@ -22,7 +22,7 @@ if (!test_mode) {
       </label>
       <input id="companyName" name="companyName" type='text' placeholder='Company name' />
   </div>
-
+ 
   <div class='form-controlx' >
       <label>Job Title</label>
       <input id='jobTitle' name="jobTitle" type='text' placeholder='Job Title' />
@@ -34,10 +34,8 @@ if (!test_mode) {
   </form>
 
   <button id="drawerButton" type="submit">
-    <img id="drawerButton-img" src="chevron-arrows-svgrepo-com_p_left.svg">
+    <img id="drawerButton-img">
   </button>
-
-
 
 
   `
@@ -46,22 +44,38 @@ if (!test_mode) {
 }
 
 
+if (test_mode) {
+  document.getElementById('drawerButton-img').src = 'chevron-arrows-svgrepo-com_p_left.svg';
+} else {
+  document.getElementById('drawerButton-img').src = chrome.runtime.getURL('icons/chevron-arrows-svgrepo-com_p_left.svg');
+}
+
 let opened = true;
 
 const form = document.getElementById('yuvForm');
 
 const drawerButton = document.getElementById('drawerButton');
+
 function drawerClick(event) {
   console.log("drawer clicked")
 
   //form.classList.toggle("out");
-  if (form.hidden){
-    document.getElementById('drawerButton-img').src = "chevron-arrows-svgrepo-com_p_right.svg";
-  } else {
-    document.getElementById('drawerButton-img').src = "chevron-arrows-svgrepo-com_p_left.svg";
-  }
-  form.hidden = !form.hidden;
+  if (opened){
+    if (test_mode) {
+      document.getElementById('drawerButton-img').src = 'chevron-arrows-svgrepo-com_p_right.svg';
+    } else {
+      document.getElementById('drawerButton-img').src = chrome.runtime.getURL('icons/chevron-arrows-svgrepo-com_p_right.svg');
+    }
+    form.classList.toggle("out")
 
+  } else {
+    if (test_mode) {
+      document.getElementById('drawerButton-img').src = 'chevron-arrows-svgrepo-com_p_left.svg';
+    } else {
+      document.getElementById('drawerButton-img').src = chrome.runtime.getURL('icons/chevron-arrows-svgrepo-com_p_left.svg');
+    }    form.classList.toggle("out")
+  }  
+  opened = !opened
 };
 drawerButton.addEventListener("click", drawerClick);
 
