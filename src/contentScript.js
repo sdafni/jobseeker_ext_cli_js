@@ -11,18 +11,18 @@ if (!test_mode) {
   yuvDiv.id = 'yuvDiv';
   yuvDiv.innerHTML = `
 
-  <form id="yuvForm" class='add-form' >
+  <form id="yuvForm" class='add-form out' >
 
-  <div  class='form-controlx'>
+  <div class='form-controlx'>
       <h1>Create new Job</h1>
   </div>
-
+  
   <div class='form-controlx'>
       <label>Company name
       </label>
       <input id="companyName" name="companyName" type='text' placeholder='Company name' />
   </div>
- 
+
   <div class='form-controlx' >
       <label>Job Title</label>
       <input id='jobTitle' name="jobTitle" type='text' placeholder='Job Title' />
@@ -31,11 +31,12 @@ if (!test_mode) {
   <div class='form-controlx'>
       <input id='submitBtn' type='submit' value='Submit' class='btn' />
   </div>
-  </form>
+</form>
 
-  <button id="drawerButton" type="submit">
-    <img id="drawerButton-img">
-  </button>
+<button id="drawerButton" type="submit">
+  Job seeker
+ <img id="drawerButton-img">
+</button>
 
 
   `

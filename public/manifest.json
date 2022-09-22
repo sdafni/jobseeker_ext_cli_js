@@ -41,7 +41,7 @@
     {
       "resources": [
         "icons/chevron-arrows-svgrepo-com_p_left.svg",
-        "icons/chevron-arrows-svgrepo-com_p_left.svg"
+        "icons/chevron-arrows-svgrepo-com_p_right.svg"
       ],
       "matches": ["<all_urls>"]
     }
