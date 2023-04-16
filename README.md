@@ -1,5 +1,5 @@
 install:
-1. clone this|
+1. clone this
 2. npm install
 3. npm run build
 4. goto chrome -> extentsions -> load unpacked -> 
