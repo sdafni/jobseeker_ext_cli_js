@@ -1,4 +1,4 @@
-install:
+# install:
 1. clone this
 2. npm install
 3. npm run build
@@ -8,7 +8,7 @@ install:
 6. might need a refresh due to some bug
 
 
-# debug test.html 
+## debug test.html: 
 run  watch-http-server -o -c-1  in /src dir
 this is so that the js scripts remain in /src for the build, but also
 for this server to find everything
